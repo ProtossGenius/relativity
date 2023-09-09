@@ -1,30 +1,29 @@
 import './App.css';
-import { Unit } from './Canvas';
-import logo from './logo.svg';
-import { MyComponent } from './MyCompent';
-
-
+import { Canvas2D } from './Canvas2D';
 
 function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <MyComponent></MyComponent>
-      </header>
-    </div>
+      <div className="left">
+        <div className="modle">
+        </div>
+        <div className="property">
+          <table width={'100%'}>
+            <tr>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <td>Speed</td>
+              <td><input type="" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div className="camera">
+        <Canvas2D backgroundColor={"#000"} width={1632} height={923} ></Canvas2D>
+      </div>
+    </div >
   );
 }
 
